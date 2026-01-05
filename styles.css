@@ -1,7 +1,7 @@
 :root {
-    --text-color: #183b2e;
-    --link-color: #4c9876;
-    --background-color: #f4f8f5;
+    --text-color: #2C2C2C;
+    --link-color: #A6C1B6;
+    --background-color: #F6F5F0;
 }
 
 * {
@@ -27,12 +27,20 @@ a {
     text-decoration: none;
 }
 
+.background-image {
+    background-image: url(./photos/Background\ light.png);
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
 /* navbar*/
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
     padding: 0 50px;
     height: 50px;
 }
@@ -72,6 +80,9 @@ nav .right a span {
 
 .hero-section .text {
     flex: 5;
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
 }
 .hero-section .text h2 {
     font-size: 35px;
@@ -129,16 +140,15 @@ nav .right a span {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    gap: 15px;
 }
 
 .skills-section .cells .cell {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
-
-    width: 200px;
-    padding: 10px;
+    width: 180px;
+    padding: 5px;
     border: 2px solid var(--link-color);
     border-radius: 5px;
 }
@@ -163,36 +173,105 @@ nav .right a span {
 .projekte-section h2 {
     text-align: center;
     font-size: 35px;
+    margin-bottom: 20px;
 }
 
-.projekte-section .group {
-    display: flex;
-    align-items: center;
-    gap: 50px;
+/* Slideshow container */
+.slideshow-container {
+    max-width: 500px;
+    position: relative;
+    margin: auto;
 }
 
-.projekte-section .group .projekt-details {
+/* Hide the images by default */
+.mySlides {
+    display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Position the "previous button" to the left */
+.prev {
+    left: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* Position the "next button" to the right */
+.next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.slideshow-container .text {
+    color: var(--text-color);
+    font-size: 20px;
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
     text-align: center;
-    flex: 2;
+}
+.mySlides .description {
+    color: var(--text-color);
+    padding: 8px 12px;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
 }
 
-.projekte-section .group .projekt-details img {
-    width: 200px;
-    aspect-ratio: 1 / 1;
-    object-fit: cover;
+/* Number text (1/3 etc) */
+.mySlides .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
     border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
 }
 
-.projekte-section .group .projekt-details p {
-    font-weight: 550;
+.active, .dot:hover {
+    background-color: #717171;
 }
 
-.projekte-section .group .projekt-details p.lastchild {
-    font-weight: normal;
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-.projekt-details .group .text {
-    flex: 8;
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
 }
 
 /* kontakt-section */
@@ -211,6 +290,9 @@ nav .right a span {
 }
 
 .kontakt-section .group .text {
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
     flex: 3;
     margin-top: 20px;
 }
@@ -233,7 +315,7 @@ nav .right a span {
 .kontakt-section .group form button {
     font-size: 16px;
     font-family: sans-serif;
-    color: white;
+    color: #FBFAF7;
     background-color: var(--link-color);
     border: none;
     height: 35px;
