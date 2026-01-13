@@ -1,11 +1,13 @@
 @import url('fonts/Satoshi_Complete/Fonts/WEB/css/satoshi.css');
+@import url('fonts/ClashGrotesk_Complete/Fonts/WEB/css/clash-grotesk.css');
 
 :root {
     --text-color: #34323C;
-    --link-color: #46534A;
-    --background-color: #BFABD1;
+    --link-color: #479074;
+    --background-color: #CCB9D8;
     --nav-text-color: #EEE6F6;
-    --nav-background-color: #456C4C;
+    --nav-background-color: #479074;
+    ---accent-color:
 }
 
 * {
@@ -29,6 +31,10 @@ body {
 a {
     color: var(--link-color);
     text-decoration: none;
+}
+
+h1, h2 {
+    font-family: 'ClashGrotesk-Regular';
 }
 
 /* navbar*/
@@ -134,7 +140,6 @@ nav .nav-right a span {
 }
 
 /* timeline-section */
-/* Timeline Container */
 .timeline-section {
     position: relative;
     padding: 50px 50px;
@@ -150,109 +155,110 @@ nav .nav-right a span {
     font-size: 35px;
     margin-bottom: 15px;
     text-align: center;
+    color: var(--nav-text-color);
 }
 
 /* Card container */
 .card {
-  position: relative;
-  max-width: 400px;
+    position: relative;
+    max-width: 400px;
 }
 
 /* setting padding based on even or odd */
 .card:nth-child(odd) {
-  padding: 30px 0 30px 30px;
+    padding: 30px 0 30px 30px;
 }
 .card:nth-child(even) {
-  padding: 30px 30px 30px 0;
+    padding: 30px 30px 30px 0;
 }
 /* Global ::before */
 .card::before {
-  content: "";
-  position: absolute;
-  width: 50%;
-  border: solid var(--nav-text-color);
+    content: "";
+    position: absolute;
+    width: 50%;
+    border: solid var(--nav-text-color);
 }
 
 /* Setting the border of top, bottom, left */
 .card:nth-child(odd)::before {
-  left: 0px;
-  top: -4.5px;
-  bottom: -4.5px;
-  border-width: 5px 0 5px 5px;
-  border-radius: 50px 0 0 50px;
+    left: 0px;
+    top: -4.5px;
+    bottom: -4.5px;
+    border-width: 5px 0 5px 5px;
+    border-radius: 50px 0 0 50px;
 }
 
 /* Setting the border of top, bottom, right */
 .card:nth-child(even)::before {
-  right: 0;
-  top: 0;
-  bottom: 0;
-  border-width: 5px 5px 5px 0;
-  border-radius: 0 50px 50px 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    border-width: 5px 5px 5px 0;
+    border-radius: 0 50px 50px 0;
 }
 
 /* Removing the border if it is the first card */
 .card:first-child::before {
-  border-top: 0;
-  border-top-left-radius: 0;
+    border-top: 0;
+    border-top-left-radius: 0;
 }
 
 /* Removing the border if it is the last card  and it's odd */
 .card:last-child:nth-child(odd)::before {
-  border-bottom: 0;
-  border-bottom-left-radius: 0;
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
 }
 
 /* Removing the border if it is the last card  and it's even */
 .card:last-child:nth-child(even)::before {
-  border-bottom: 0;
-  border-bottom-right-radius: 0;
+    border-bottom: 0;
+    border-bottom-right-radius: 0;
 }
 
 /* Information about the timeline */
 .info {
-  display: flex;
-  flex-direction: column;
-  background: var(--nav-text-color);
-  color: var(--link-color);
-  border-radius: 10px;
-  padding: 10px;
-  flex: 5;
-  text-align: justify;
-  text-align-last: left;
-  hyphens: auto;
+    display: flex;
+    flex-direction: column;
+    background: var(--nav-text-color);
+    color: var(--link-color);
+    border-radius: 10px;
+    padding: 10px;
+    flex: 5;
+    text-align: justify;
+    text-align-last: left;
+    hyphens: auto;
 }
 
 /* Title of the card */
 .title {
-  color: var(--text-color);
-  position: relative;
+    color: var(--text-color);
+    position: relative;
 }
 
 /* Timeline dot  */
 .title::before {
-  content: "";
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background: white;
-  border-radius: 999px;
-  border: 3px solid var(--link-color);
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: white;
+    border-radius: 999px;
+    border: 3px solid var(--link-color);
 }
 
 /* text right if the card is even  */
 .card:nth-child(even) > .info > .title {
-  text-align: right;
+    text-align: right;
 }
 
 /* setting dot to the left if the card is odd */
 .card:nth-child(odd) > .info > .title::before {
-  left: -45px;
+    left: -45px;
 }
 
 /* setting dot to the right if the card is odd */
 .card:nth-child(even) > .info > .title::before {
-  right: -45px;
+    right: -45px;
 }
 
 /* skills-section */
@@ -321,103 +327,52 @@ nav .nav-right a span {
     margin-bottom: 20px;
 }
 
-/* Slideshow container */
-.slideshow-container {
-    max-width: 500px;
-    position: relative;
-    margin: auto;
+.projekte-section img {
+    border-radius: 5px;
 }
 
-/* Hide the images by default */
-.mySlides {
-    display: none;
+.row {
+    margin: 8px -16px;
 }
 
-/* Next & previous buttons */
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+/* Add padding BETWEEN each column (if you want) */
+.row,
+.row > .column {
+    padding: 8px;
 }
 
-/* Position the "previous button" to the left */
-.prev {
-    left: 0;
-    border-radius: 3px 0 0 3px;
+/* Create three equal columns that floats next to each other */
+.column {
+    float: left;
+    width: 33%;
 }
 
-/* Position the "next button" to the right */
-.next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+/* Content */
+.content {
+    background-color: white;
+    padding: 15px;
+    border-radius: 10px;
 }
 
-/* Caption text */
-.slideshow-container .text {
-    color: var(--text-color);
-    font-size: 20px;
-    padding: 25px 0;
-    bottom: 8px;
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 950px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
     width: 100%;
-    text-align: center;
-}
-.mySlides .description {
-    color: var(--text-color);
-    padding: 5px 15px;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-    hyphens: auto;
-}
-
-/* Number text (1/3 etc) */
-.mySlides .numbertext {
-    color: #f2f2f2;
-    font-size: 12px;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 15px 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-    background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-    animation-name: fade;
-    animation-duration: 1.5s;
-}
-
-@keyframes fade {
-    from {opacity: .4}
-    to {opacity: 1}
+  }
 }
 
 /* kontakt-section */
@@ -460,6 +415,7 @@ nav .nav-right a span {
     padding: 5px;
     margin-bottom: 15px;
     resize: none;
+    border-radius: 5px;
 }
 
 .kontakt-section .group form button {
@@ -471,6 +427,7 @@ nav .nav-right a span {
     height: 35px;
     cursor: pointer;
     transition: .1;
+    border-radius: 5px;
 }
 
 .kontakt-section .group form button:hover {
@@ -478,10 +435,10 @@ nav .nav-right a span {
 }
 
 footer {
-  text-align: center;
-  padding: 3px;
-  background-color: var(--nav-background-color);
-  color: var(--nav-text-color);
+    text-align: center;
+    padding: 3px;
+    background-color: var(--nav-background-color);
+    color: var(--nav-text-color);
 }
 
 @media (max-width: 875px) {
