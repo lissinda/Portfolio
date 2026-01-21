@@ -8,6 +8,7 @@
     --nav-text-color: #EBF4DD;
     --nav-background-color: #5A7863;
     --accent-color: #F3EAF4;
+    --project-background-color: #A5879C;
 }
 
 * {
@@ -375,7 +376,7 @@ nav .nav-right a span {
 
 /* Content */
 .content {
-    background-color: var(--link-color);
+    background-color: var(--project-background-color);
     padding: 15px;
     border-radius: 10px;
 }
