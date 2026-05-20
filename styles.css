@@ -142,10 +142,7 @@ nav .nav-right a span {
 /* timeline-section */
 .timeline-section {
     position: relative;
-    padding: 50px 50px;
     border-radius: 20px;
-    margin: 50px 50px;
-    margin-bottom: 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -268,8 +265,7 @@ nav .nav-right a span {
 /* skills-section */
 .skills-section {
     padding: 50px 50px;
-    margin-bottom: 100px;
-    background: var(--nav-text-color);
+    background: var(--background-color);
     border-radius: 20px;
     margin: 10px 50px;
 }
@@ -277,6 +273,7 @@ nav .nav-right a span {
 .skills-section h2 {
     text-align: center;
     font-size: 35px;
+    color: var(--nav-text-color);
 }
 
 .skills-section .text {
@@ -289,11 +286,14 @@ nav .nav-right a span {
 .skills-grid {
   display: grid;
   gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(3, minmax(240px, 1fr));
   margin-top: 40px;
 }
 
 .skill-card {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   background: var(--nav-text-color);
   padding: 20px 18px;
   border-radius: 12px;
@@ -316,12 +316,24 @@ nav .nav-right a span {
   margin-bottom: 8px;
 }
 
+@media (max-width: 950px) {
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 /* projekte-section */
 .projekte-section {
     padding: 50px 50px;
     background: var(--nav-text-color);
     border-radius: 20px;
-    margin: 100px 50px;
+    margin: 0px 50px;
     margin-bottom: 100px;
 }
 
@@ -332,7 +344,8 @@ nav .nav-right a span {
 }
 
 .projekte-section img {
-    border-radius: 5px;
+    width: 100%;
+    border-radius: 8px;
     aspect-ratio: 16 / 11;
     object-fit: cover;
 }
@@ -350,48 +363,32 @@ nav .nav-right a span {
     hyphens: auto;
 }
 
+/* Projekte Grid */
 .row {
-    margin: 8px -16px;
+    display: grid;
+    /* Responsive Grid */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 24px;
+    margin-top: 40px;
 }
 
-/* Add padding BETWEEN each column (if you want) */
-.row,
-.row > .column {
-    padding: 8px;
-}
-
-/* Create three equal columns that floats next to each other */
+/* Alte Float-Regeln entfernen */
 .column {
-    float: left;
-    width: 33%;
+    width: 100%;
 }
 
-/* Clear floats after rows */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-
-/* Content */
+/* Karten */
 .content {
     background-color: var(--project-background-color);
-    padding: 15px;
-    border-radius: 10px;
+    border-radius: 12px;
+    padding: 16px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
-/* Responsive layout - makes a two column-layout instead of four columns */
-@media screen and (max-width: 950px) {
-  .column {
-    width: 50%;
-  }
-}
-
-/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-  }
+.content p {
+    flex-grow: 1;
 }
 
 /* eindrücke-sektion */
