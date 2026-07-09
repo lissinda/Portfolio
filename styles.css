@@ -3,12 +3,11 @@
 
 :root {
     --text-color: #3B4953;
-    --link-color: #8A568C;
-    --background-color: #90AB8B;
-    --nav-text-color: #EBF4DD;
-    --nav-background-color: #5A7863;
-    --accent-color: #F3EAF4;
-    --project-background-color: #A5879C;
+    --link-color: #B57B66;
+    --background-color: #E6E1D2;
+    --card-color: #E6E1D2;
+    --nav-background-color: #68756D;
+    --accent-color: #B57B66;
 }
 
 * {
@@ -24,7 +23,7 @@ html {
 body {
     font-family: 'Satoshi-medium';
     color: var(--text-color);
-    background-color: var(--background-color);
+    background-color: var(--nav-background-color);
     max-width: 1400px;
     margin: 0 auto;
 }
@@ -49,19 +48,19 @@ nav {
 }
 
 nav .nav-left a{
-    color: var(--nav-text-color);
+    color: var(--background-color);
     font-size: 20px;
     font-weight: 550;
 }
 
 nav .nav-right a{
-    color: var(--nav-text-color);
+    color: var(--background-color);
     margin: 0 10px;
 }
 
 nav .nav-right a:last-child {
     color: var(--nav-background-color);
-    background-color: var(--nav-text-color);
+    background-color: var(--background-color);
     padding: 5px 15px;
     border-radius: 10px;
 }
@@ -77,10 +76,9 @@ nav .nav-right a span {
     align-items: center;
     padding: 50px 50px;
     border-radius: 20px;
-    margin: 50px 50px;
-    margin-bottom: 50px;
+    margin: 5% 50px;
     gap: 100px;
-    background: var(--nav-text-color);
+    background: var(--card-color);
 }
 
 .hero-section .text {
@@ -146,17 +144,18 @@ nav .nav-right a span {
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px 50px;
 }
 
 .timeline-section > h2 {
     font-size: 35px;
     margin-bottom: 15px;
     text-align: center;
-    color: var(--nav-text-color);
+    color: var(--card-color);
 }
 
 .timeline-section .info {
-    padding: 15px 20px;
+    padding: 25px 30px;
 }
 
 /* Card container */
@@ -177,7 +176,7 @@ nav .nav-right a span {
     content: "";
     position: absolute;
     width: 50%;
-    border: solid var(--nav-text-color);
+    border: solid var(--card-color);
 }
 
 /* Setting the border of top, bottom, left */
@@ -220,7 +219,7 @@ nav .nav-right a span {
 .info {
     display: flex;
     flex-direction: column;
-    background: var(--nav-text-color);
+    background: var(--card-color);
     color: var(--text-color);
     border-radius: 10px;
     padding: 10px;
@@ -242,9 +241,9 @@ nav .nav-right a span {
     position: absolute;
     width: 10px;
     height: 10px;
-    background: var(--accent-color);
+    background: var(--background-color);
     border-radius: 999px;
-    border: 3px solid var(--project-background-color);
+    border: 3px solid var(--accent-color);
 }
 
 /* text right if the card is even  */
@@ -254,12 +253,12 @@ nav .nav-right a span {
 
 /* setting dot to the left if the card is odd */
 .card:nth-child(odd) > .info > .title::before {
-    left: -55px;
+    left: -65px;
 }
 
 /* setting dot to the right if the card is odd */
 .card:nth-child(even) > .info > .title::before {
-    right: -55px;
+    right: -65px;
 }
 
 /* skills-section */
@@ -267,13 +266,13 @@ nav .nav-right a span {
     padding: 50px 50px;
     background: var(--background-color);
     border-radius: 20px;
-    margin: 10px 50px;
+    margin: 100px 50px;
 }
 
 .skills-section h2 {
     text-align: center;
     font-size: 35px;
-    color: var(--nav-text-color);
+    color: var(--text-color);
 }
 
 .skills-section .text {
@@ -294,7 +293,7 @@ nav .nav-right a span {
   display: flex;
   flex-direction: column;
   height: 100%;
-  background: var(--nav-text-color);
+  background: var(--card-color);
   padding: 20px 18px;
   border-radius: 12px;
   text-align: left;
@@ -331,16 +330,16 @@ nav .nav-right a span {
 /* projekte-section */
 .projekte-section {
     padding: 50px 50px;
-    background: var(--nav-text-color);
+    background: var(--nav-background-color);
     border-radius: 20px;
-    margin: 0px 50px;
-    margin-bottom: 100px;
+    margin: 100px 50px;
 }
 
 .projekte-section h2 {
     text-align: center;
     font-size: 35px;
     margin-bottom: 20px;
+    color: var(--background-color);
 }
 
 .projekte-section img {
@@ -353,11 +352,11 @@ nav .nav-right a span {
 .projekte-section h3 {
     margin-top: 10px;
     margin-bottom: 5px;
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 .projekte-section p {
-    color: var(--accent-color);
+    color: var(--text-color);
     text-align: justify;
     text-align-last: left;
     hyphens: auto;
@@ -379,7 +378,7 @@ nav .nav-right a span {
 
 /* Karten */
 .content {
-    background-color: var(--project-background-color);
+    background-color: var(--background-color);
     border-radius: 12px;
     padding: 16px;
     height: 100%;
@@ -400,7 +399,7 @@ nav .nav-right a span {
 }
 
 .eindrücke-section h2 {
-    color: var(--nav-text-color);
+    color: var(--card-color);
     text-align: center;
     font-size: 35px;
     margin-bottom: 20px;
@@ -493,10 +492,8 @@ nav .nav-right a span {
 .kontakt-section {
     padding: 50px 50px;
     margin: 100px 50px;
-    margin-bottom: 100px;
-    background: var(--nav-text-color);
+    background: var(--card-color);
     border-radius: 20px;
-    margin-bottom: 50px;
 }
 
 .kontakt-section h2 {
@@ -525,8 +522,8 @@ nav .nav-right a span {
 .kontakt-section .group form input,
 .kontakt-section .group form textarea {
     font-family: 'Satoshi-Regular';
-    border: 2px solid var(--project-background-color);
-    background-color: var(--accent-color);
+    border: 2px solid var(--accent-color);
+    background-color: #F2F2F2;
     padding: 5px;
     margin-bottom: 15px;
     resize: none;
@@ -537,7 +534,7 @@ nav .nav-right a span {
 .kontakt-section .group form button {
     font-size: 16px;
     font-family: 'Satoshi-Regular';
-    color: var(--accent-color);
+    color: var(--card-color);
     background-color: var(--link-color);
     border: none;
     height: 35px;
@@ -554,7 +551,7 @@ footer {
     text-align: center;
     padding: 3px;
     background-color: var(--nav-background-color);
-    color: var(--nav-text-color);
+    color: var(--card-color);
 }
 
 footer a {
@@ -624,7 +621,7 @@ footer a {
     }
 
     nav .nav-right a:last-child {
-        color: var(--nav-text-color);
+        color: var(--card-color);
         background-color: transparent;
         padding: 0;
     }
@@ -679,7 +676,7 @@ footer a {
     }
 
     nav .nav-right a:last-child {
-        color: var(--nav-text-color);
+        color: var(--card-color);
         background-color: transparent;
         padding: 0;
     }
